@@ -1,0 +1,11 @@
+*.DS_Store
+**/xcuserdata/
+**/xcuserstate
+**/*.xcuserdatad
+
+**/xcshareddata/WorkspaceSettings.xcsettings
+DerivedData/
+.build/
+*.xccheckout
+*.moved-aside
+*.xcscheme
