@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "EstimotePositioningSDK",
-            targets: ["EstimotePositioningSDK"]),
+            targets: ["EstimotePositioningWrapper"]),
     ],
     dependencies: [
         .package(
@@ -19,14 +19,14 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "EstimotePositioningSDKBinary",
+            name: "EstimotePositioningSDK",
             url: "https://github.com/Estimote/estimote-positioning-sdk-ios/releases/download/v1.0.0-beta/EstimotePositioningSDK.xcframework.zip",
             checksum: "e46904b150fcf565c542c3f696e233cc2d032aa2ed572f8d5cac55d7a19a2f97"
         ),
         .target(
-            name: "EstimotePositioningSDK",
+            name: "EstimotePositioningWrapper",
             dependencies: [
-                "EstimotePositioningSDKBinary",
+                "EstimotePositioningSDK",
                 .product(name: "EstimoteSDK", package: "estimote-sdk-ios")
             ]
         )
