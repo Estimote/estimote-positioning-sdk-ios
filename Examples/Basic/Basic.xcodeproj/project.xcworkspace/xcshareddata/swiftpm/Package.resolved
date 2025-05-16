@@ -1,0 +1,24 @@
+{
+  "originHash" : "b61d4dfabe5eb8db52b406c586731e40f02853ce4b63064bf5f715faed81e626",
+  "pins" : [
+    {
+      "identity" : "estimote-positioning-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Estimote/estimote-positioning-sdk-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "aac06c5504a115723dd4290dc83c2e21139c8251"
+      }
+    },
+    {
+      "identity" : "estimote-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Estimote/estimote-sdk-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e6d3ed34dd9155c98da531fae09412bee4768e60"
+      }
+    }
+  ],
+  "version" : 3
+}

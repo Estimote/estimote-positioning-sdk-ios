@@ -30,16 +30,13 @@ class Positioning: ObservableObject {
     private var positioningManager: EstimotePositioningManager!
     @Published private(set) var position: EstimotePositioningSDK.EstimatedPosition?
     
-    private let anchorsJSON = """
-    [
-      { "id": "1cae6cfe66c0af54fab296ab320af019", "x": 0.0, "y": 0.0 },
-      { "id": "d67ad7275ea880fad54313368470610f", "x": 4.0, "y": 0.0 },
-      { "id": "f8bf584d6f3221ee9cb3bdcc723ee12e", "x": 4.0, "y": 8.0 },
-      { "id": "9db1c7f4f64c4fc4a52f6e01d121c07a", "x": 0.0, "y": 8.0 }
-    ]
-    """
-    
     init() {
+        // Load anchors from anchors.json in the app bundle
+        guard let url = Bundle.main.url(forResource: "anchors", withExtension: "json"),
+              let anchorsJSON = try? String(contentsOf: url) else {
+            fatalError("Could not load anchors.json")
+        }
+        
         positioningManager = EstimotePositioningManager(anchorsJSON: anchorsJSON)
         positioningManager.startPositioning(withCameraAssistance: true)
         
