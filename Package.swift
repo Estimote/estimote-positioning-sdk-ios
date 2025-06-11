@@ -20,8 +20,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "EstimotePositioningSDK",
-            url: "https://github.com/Estimote/estimote-positioning-sdk-ios/releases/download/v1.0.0-beta/EstimotePositioningSDK.xcframework.zip",
-            checksum: "e46904b150fcf565c542c3f696e233cc2d032aa2ed572f8d5cac55d7a19a2f97"
+            url: "https://github.com/Estimote/estimote-positioning-sdk-ios/releases/download/v1.0.0-beta2/EstimotePositioningSDK.xcframework.zip",
+            checksum: "fc497b73a345f0cba385e1b6226bb521f52c9f39fc408881a17ab7f0ac748559"
         ),
         .target(
             name: "EstimotePositioningWrapper",
